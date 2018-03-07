@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/usgs/libcomcat/archive/{{ version }}.tar.gz
-  sha256: c065eb69999b49960bbba3aaf06e3c8b2b9f7b9b7b545a08760cd4918654a863
+  sha256: 08e6b91759a6e51f55935d055bcaf86da779a82ed9fe19335cb7dd6ea1fc378f
 
 build:
   number: 0
