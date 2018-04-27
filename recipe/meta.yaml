@@ -1,4 +1,4 @@
-{% set version = "1.2.2" %}
+{% set version = "1.2.3" %}
 
 package:
   name: libcomcat
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/usgs/libcomcat/archive/{{ version }}.tar.gz
-  sha256: bb32ed33adfc4e3e25e2c38b34c70c086d233e02d542fe507cfb13f24713cb0f
+  sha256: fcdc5bcfa54a21816801cefba04f376bd9a8a293f1e9be9a4e1e6e01f0f0fc69
 
 build:
   number: 0
