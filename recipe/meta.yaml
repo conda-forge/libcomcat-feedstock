@@ -9,13 +9,13 @@ source:
   sha256: 32857807249b7248b6fd0dc88581d0ac8a4cf7bc08c7d414ed0ffe0a91bca4a5
 
 build:
-  number: 0
-  skip: True  # [py27]
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
-
+  noarch: python
+  
 requirements:
   build:
-    - python
+    - python >=3.5
     - pip
   run:
     - python
