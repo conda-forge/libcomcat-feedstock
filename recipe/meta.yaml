@@ -1,4 +1,4 @@
-{% set version = "1.2.12" %}
+{% set version = "1.2.13" %}
 
 package:
   name: libcomcat
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/usgs/libcomcat/archive/{{ version }}.tar.gz
-  sha256: c74d279b5c5974e77cc57430f78bd95b14f0405e68f29a03c18498a66c717c0f
+  sha256: e52368f43bd102b0a23a55b6df1eff396f75a7afd789e3daa425e4a615998abf
 
 build:
   noarch: python
@@ -16,10 +16,10 @@ build:
   
 requirements:
   build:
-    - python >=3
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - python-dateutil
     - numpy >=1.14
     - pandas
