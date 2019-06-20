@@ -1,5 +1,6 @@
 {% set version = "1.2.16" %}
 
+
 package:
   name: libcomcat
   version: {{ version }}
@@ -16,10 +17,10 @@ build:
   
 requirements:
   build:
-    - python >=3
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - python-dateutil
     - numpy >=1.14
     - pandas
