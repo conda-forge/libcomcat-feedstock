@@ -1,4 +1,4 @@
-{% set version = "1.1.18" %}
+{% set version = "1.2.18" %}
 
 
 package:
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://github.com/usgs/libcomcat/archive/{{ version }}.tar.gz
-  sha256: f4488a097baebf05896993203ad660ecec25f94544ed73f6419ffc4b14ae4953
-
-# changing something to try to restart azure builds
+  sha256: 9cf4c594488a5d2619ac61f431c9af8d857325015d5cda6f62ad69706f5eb390
 
 build:
   noarch: python
