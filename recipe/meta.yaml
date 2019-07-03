@@ -9,6 +9,8 @@ source:
   url: https://github.com/usgs/libcomcat/archive/{{ version }}.tar.gz
   sha256: f4488a097baebf05896993203ad660ecec25f94544ed73f6419ffc4b14ae4953
 
+# changing something to try to restart azure builds
+
 build:
   noarch: python
   number: 0
