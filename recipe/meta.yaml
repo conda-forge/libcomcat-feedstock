@@ -1,4 +1,4 @@
-{% set version = "1.2.18" %}
+{% set version = "1.2.19" %}
 
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/usgs/libcomcat/archive/{{ version }}.tar.gz
-  sha256: 9cf4c594488a5d2619ac61f431c9af8d857325015d5cda6f62ad69706f5eb390
+  sha256: b57a210377466b4311596b959e931ec72362893aa191f8a822a278cc595b3711
 
 build:
   noarch: python
