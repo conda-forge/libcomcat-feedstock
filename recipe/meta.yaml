@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   
@@ -32,7 +32,15 @@ requirements:
     - obspy
 
 test:
-
+  commands:
+    - findid --help
+    - getcsv --help
+    - geteventhist --help
+    - getmags --help
+    - getpager --help
+    - getphases --help
+    - getproduct --help
+    
   imports:
     - libcomcat
 
