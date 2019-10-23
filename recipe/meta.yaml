@@ -32,7 +32,16 @@ requirements:
     - obspy
 
 test:
-
+  commands:
+    - findid --help
+    - getcsv --help
+    - geteventhist --help
+    - getimpact --help
+    - getmags --help
+    - getpager --help
+    - getphases --help
+    - getproduct --help
+    
   imports:
     - libcomcat
 
