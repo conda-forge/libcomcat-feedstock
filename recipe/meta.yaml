@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 3
+  number: 4
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -32,7 +32,6 @@ requirements:
     - python >=3.6
     - python-dateutil
     - numpy >=1.14
-    - fiona >=1.8.9.post2
     - pandas
     - xlrd
     - xlwt
