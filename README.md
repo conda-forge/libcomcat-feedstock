@@ -5,7 +5,7 @@ Home: https://github.com/usgs/libcomcat
 
 Package license: Public Domain
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Python wrapper around ANSS ComCat API (plus tools).
 
