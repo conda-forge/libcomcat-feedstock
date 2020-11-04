@@ -38,6 +38,7 @@ requirements:
     - xlsxwriter
     - impactutils
     - obspy
+    - pyproj
 
 test:
   commands:
