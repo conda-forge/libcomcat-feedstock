@@ -1,4 +1,4 @@
-{% set version = "2.0.9" %}
+{% set version = "2.0.10" %}
 
 
 package:
@@ -7,12 +7,11 @@ package:
 
 source:
   url: https://github.com/usgs/libcomcat/archive/{{ version }}.tar.gz
-  sha256: 5dbcb57f71d3b97d3443824000f7bd9fe57b194f355298c6bdb48e0054aa3d10
+  sha256: 5be6d182f9fa44ad1ae8fa654af13974cba945ab9023115ab5afa1fb651e7836
 
 build:
   noarch: python
-  number: 2
-  noarch: python
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - findid = libcomcat.bin.findid:main
@@ -22,9 +21,9 @@ build:
     - getpager = libcomcat.bin.getpager:main
     - getphases = libcomcat.bin.getphases:main
     - getproduct = libcomcat.bin.getproduct:main
-  
+
 requirements:
-  build:
+  host:
     - python >=3.6
     - pip
   run:
@@ -49,14 +48,14 @@ test:
     - getpager --help
     - getphases --help
     - getproduct --help
-    
+
   imports:
     - libcomcat
 
 about:
   home: https://github.com/usgs/libcomcat
   license: Public Domain
-  summary: 'Python wrapper around ANSS ComCat API (plus tools).'
+  summary: Python wrapper around ANSS ComCat API (plus tools).
   license_family: Public Domain
   license_file: LICENSE.md
 
