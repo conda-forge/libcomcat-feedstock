@@ -35,10 +35,12 @@ requirements:
 test:
   imports:
     - libcomcat
-  commands:
-    - pip check
-  requires:
-    - pip
+  # cannot run pip check b/c esi-utils-time depends on beautifulsoup4,
+  # and pip doesn't know that bs4 is beautifulsoup4.
+  # commands:
+  #   - pip check
+  # requires:
+  #   - pip
 
 about:
   home: https://pypi.org/project/usgs-libcomcat/
