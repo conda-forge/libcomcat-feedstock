@@ -34,7 +34,7 @@ requirements:
 
 test:
   imports:
-    - usgs_libcomcat
+    - libcomcat
   commands:
     - pip check
   requires:
