@@ -1,66 +1,53 @@
-{% set version = "2.0.17" %}
+{% set name = "usgs-libcomcat" %}
+{% set version = "2.0.20" %}
 
 package:
-  name: libcomcat
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/usgs/libcomcat/archive/{{ version }}.tar.gz
-  sha256: 939f756245fd2951479a12b2f7c8d6baaf7c31c82ba16487f4f38fab4f50efe6
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/usgs-libcomcat-{{ version }}.tar.gz
+  sha256: 3cd9a0922ad7a6e5a47ce418a734b79171f50d222025cc0f7b3026315122b3b9
 
 build:
   noarch: python
-  number: 2
-  noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
-  entry_points:
-    - findid = libcomcat.bin.findid:main
-    - getcsv = libcomcat.bin.getcsv:main
-    - geteventhist = libcomcat.bin.geteventhist:main
-    - getmags = libcomcat.bin.getmags:main
-    - getpager = libcomcat.bin.getpager:main
-    - getphases = libcomcat.bin.getphases:main
-    - getproduct = libcomcat.bin.getproduct:main
-  
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
+
 requirements:
-  build:
-    - python >=3.6
+  host:
+    - python >=3.7,<3.11
     - pip
   run:
-    - python >=3.6
-    - python-dateutil
-    - numpy <=1.21
-    - pandas
-    - xlrd
-    - xlwt
-    - openpyxl
-    - xlsxwriter
-    - impactutils
-    - obspy
-    - pyproj
+    - python >=3.7,<3.11
+    - esi-utils-geo
+    - esi-utils-time
+    - esi-utils-io
+    - fiona >=1.8.20
+    - h5py
+    - numpy >=1.21
+    - obspy >=1.2.1
+    - pandas >=1.3.3
+    - openpyxl >=3.0.6
+    - geopy >=2.1.0
+    - xlsxwriter >=3.0.1
 
 test:
-  commands:
-    - findid --help
-    - getcsv --help
-    - geteventhist --help
-    - getmags --help
-    - getpager --help
-    - getphases --help
-    - getproduct --help
-    
   imports:
     - libcomcat
+  # cannot run pip check b/c esi-utils-time depends on beautifulsoup4,
+  # and pip doesn't know that bs4 is beautifulsoup4.
+  # commands:
+  #   - pip check
+  # requires:
+  #   - pip
 
 about:
-  home: https://github.com/usgs/libcomcat
-  license: Public Domain
-  summary: 'Python wrapper around ANSS ComCat API (plus tools).'
-  license_family: Public Domain
+  home: https://pypi.org/project/usgs-libcomcat/
+  summary: Python wrapper around ComCat web API
+  license: Unlicense
   license_file: LICENSE.md
 
 extra:
   recipe-maintainers:
     - mhearne-usgs
-    - cbworden
-    - emthompson-usgs
