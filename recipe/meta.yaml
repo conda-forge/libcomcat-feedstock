@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/usgs-libcomcat-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/usgs-libcomcat-{{ version }}.tar.gz
   sha256: 3cd9a0922ad7a6e5a47ce418a734b79171f50d222025cc0f7b3026315122b3b9
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7,<3.11
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7,<3.11
+    - python >={{ python_min }},<3.11
     - esi-utils-geo
     - esi-utils-time
     - esi-utils-io
@@ -33,6 +33,8 @@ requirements:
     - xlsxwriter >=3.0.1
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - libcomcat
   # cannot run pip check b/c esi-utils-time depends on beautifulsoup4,
