@@ -1,11 +1,11 @@
-About usgs-libcomcat
-====================
+About usgs-libcomcat-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libcomcat-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/usgs-libcomcat/
 
 Package license: Unlicense
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libcomcat-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python wrapper around ComCat web API
 
